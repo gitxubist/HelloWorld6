@@ -6,30 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4831CAF22D569FDD00EF2559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831CAE82D569FDD00EF2559 /* AppDelegate.swift */; };
+		4831CAF32D569FDD00EF2559 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831CAEF2D569FDD00EF2559 /* SceneDelegate.swift */; };
+		4831CAF42D569FDD00EF2559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831CAF02D569FDD00EF2559 /* ViewController.swift */; };
+		4831CAF52D569FDD00EF2559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4831CAE92D569FDD00EF2559 /* Assets.xcassets */; };
+		4831CAF72D569FDD00EF2559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4831CAEC2D569FDD00EF2559 /* LaunchScreen.storyboard */; };
+		4831CAF82D569FDD00EF2559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4831CAEE2D569FDD00EF2559 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4831CAD02D569FCF00EF2559 /* HelloWorld6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld6.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4831CAE82D569FDD00EF2559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4831CAE92D569FDD00EF2559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4831CAEA2D569FDD00EF2559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4831CAEB2D569FDD00EF2559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4831CAED2D569FDD00EF2559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4831CAEF2D569FDD00EF2559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4831CAF02D569FDD00EF2559 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4831CAE22D569FD000EF2559 /* Exceptions for "HelloWorld6" folder in "HelloWorld6" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4831CACF2D569FCF00EF2559 /* HelloWorld6 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4831CAD22D569FCF00EF2559 /* HelloWorld6 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4831CAE22D569FD000EF2559 /* Exceptions for "HelloWorld6" folder in "HelloWorld6" target */,
-			);
-			path = HelloWorld6;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4831CACD2D569FCF00EF2559 /* Frameworks */ = {
@@ -45,7 +40,7 @@
 		4831CAC72D569FCF00EF2559 = {
 			isa = PBXGroup;
 			children = (
-				4831CAD22D569FCF00EF2559 /* HelloWorld6 */,
+				4831CAF12D569FDD00EF2559 /* HelloWorld6 */,
 				4831CAD12D569FCF00EF2559 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +51,20 @@
 				4831CAD02D569FCF00EF2559 /* HelloWorld6.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4831CAF12D569FDD00EF2559 /* HelloWorld6 */ = {
+			isa = PBXGroup;
+			children = (
+				4831CAE82D569FDD00EF2559 /* AppDelegate.swift */,
+				4831CAEF2D569FDD00EF2559 /* SceneDelegate.swift */,
+				4831CAF02D569FDD00EF2559 /* ViewController.swift */,
+				4831CAE92D569FDD00EF2559 /* Assets.xcassets */,
+				4831CAEA2D569FDD00EF2559 /* Info.plist */,
+				4831CAEC2D569FDD00EF2559 /* LaunchScreen.storyboard */,
+				4831CAEE2D569FDD00EF2559 /* Main.storyboard */,
+			);
+			path = HelloWorld6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +81,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4831CAD22D569FCF00EF2559 /* HelloWorld6 */,
 			);
 			name = HelloWorld6;
 			packageProductDependencies = (
@@ -122,6 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4831CAF52D569FDD00EF2559 /* Assets.xcassets in Resources */,
+				4831CAF72D569FDD00EF2559 /* LaunchScreen.storyboard in Resources */,
+				4831CAF82D569FDD00EF2559 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +141,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4831CAF22D569FDD00EF2559 /* AppDelegate.swift in Sources */,
+				4831CAF32D569FDD00EF2559 /* SceneDelegate.swift in Sources */,
+				4831CAF42D569FDD00EF2559 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4831CAEC2D569FDD00EF2559 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831CAEB2D569FDD00EF2559 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4831CAEE2D569FDD00EF2559 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831CAED2D569FDD00EF2559 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4831CAE42D569FD000EF2559 /* Debug */ = {
@@ -159,9 +190,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.HelloWorld6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -186,9 +221,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.HelloWorld6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
