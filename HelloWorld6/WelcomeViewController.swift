@@ -44,7 +44,7 @@ final class WelcomeViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {
+    @IBAction private func unwindToLoginScreen(segue: UIStoryboardSegue) {
         userNameValue = ""
         passwordValue = ""
     }
