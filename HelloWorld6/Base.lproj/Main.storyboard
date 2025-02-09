@@ -80,9 +80,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBD-2f-w3Z">
-                                <rect key="frame" x="147" y="417" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-U0-EYL">
+                                <rect key="frame" x="16" y="130" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.91976243260000001" green="0.011259747549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hands.and.sparkles.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-gE-l0A">
+                                <rect key="frame" x="16" y="188" width="343" height="71"/>
+                                <color key="tintColor" red="0.96078431610000004" green="0.81176471709999998" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65.5" id="4Ic-vn-wwN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBD-2f-w3Z">
+                                <rect key="frame" x="16" y="532" width="343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <color key="baseForegroundColor" red="0.91976243260000001" green="0.011259747549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -91,21 +103,20 @@
                                     <action selector="logOutAction" destination="jTz-df-Cv6" eventType="touchUpInside" id="c7b-md-zvw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-U0-EYL">
-                                <rect key="frame" x="16" y="126" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91976243260000001" green="0.011259747549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hands.and.sparkles.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-gE-l0A">
-                                <rect key="frame" x="154" y="169" width="69" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.96078431610000004" green="0.81176471709999998" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pKO-bt-lDM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pKO-bt-lDM" firstAttribute="bottom" secondItem="tBD-2f-w3Z" secondAttribute="bottom" constant="100" id="8XJ-N5-87h"/>
+                            <constraint firstItem="Ix2-gE-l0A" firstAttribute="leading" secondItem="tBD-2f-w3Z" secondAttribute="leading" id="FhD-6K-Pqy"/>
+                            <constraint firstItem="VKU-U0-EYL" firstAttribute="top" secondItem="pKO-bt-lDM" secondAttribute="top" constant="130" id="IQQ-fh-3yS"/>
+                            <constraint firstItem="VKU-U0-EYL" firstAttribute="trailing" secondItem="Ix2-gE-l0A" secondAttribute="trailing" id="gL2-r2-Kud"/>
+                            <constraint firstItem="Ix2-gE-l0A" firstAttribute="trailing" secondItem="tBD-2f-w3Z" secondAttribute="trailing" id="jmo-pz-ot1"/>
+                            <constraint firstItem="VKU-U0-EYL" firstAttribute="leading" secondItem="gzo-Im-4yt" secondAttribute="leadingMargin" id="ueQ-BS-guZ"/>
+                            <constraint firstItem="Ix2-gE-l0A" firstAttribute="top" secondItem="VKU-U0-EYL" secondAttribute="bottom" constant="40" id="xSh-Vq-HE7"/>
+                            <constraint firstItem="VKU-U0-EYL" firstAttribute="trailing" secondItem="gzo-Im-4yt" secondAttribute="trailingMargin" id="y86-wO-pEG"/>
+                            <constraint firstItem="VKU-U0-EYL" firstAttribute="leading" secondItem="Ix2-gE-l0A" secondAttribute="leading" id="zgr-WT-UVc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m36-Ix-dmY"/>
                     <connections>

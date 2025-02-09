@@ -15,11 +15,13 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let gradientLayer = CAGradientLayer()
         
         gradientLayer.colors = [
                     UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0).cgColor,
-                    UIColor(red: 135/255, green: 206/255, blue: 250/255, alpha: 1.0).cgColor  
+                    UIColor(red: 135/255, green: 206/255, blue: 250/255, alpha: 1.0).cgColor
                 ]
         
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
@@ -27,7 +29,6 @@ final class WelcomeViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, at: 0)
-
     }
     
     // MARK: - IB Actions
