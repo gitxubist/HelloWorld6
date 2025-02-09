@@ -9,13 +9,13 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private let smileyFace: String = "😄"
-    private let smileyFaceEmoji: String = "😊"
-    
     // MARK: - IB Outlets
     @IBOutlet private weak var userNameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     
+    // MARK: - Private Properties
+    private let smileyFace: String = "😄"
+    private let smileyFaceEmoji: String = "😊"
     
     override func viewDidLoad() {
         super.viewDidLoad()
