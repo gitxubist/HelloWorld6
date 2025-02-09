@@ -36,6 +36,16 @@ final class MainViewController: UIViewController {
         view.endEditing(true)
     }
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userNameField.text == "1", passwordField.text == "1" else {
+            showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
+            return false
+        }
+        
+        // Введенное имя валидно, разрешаем переход
+        return true
+    }
+
     // MARK: - IB Actions
     @IBAction private func forgotActionUN() {
         showAlert(withTitle: "Oops", andMessage: "Your name is 1 \(smileyFace)")
@@ -57,11 +67,6 @@ final class MainViewController: UIViewController {
         
         if !isUsernameValid {
             showAlert(withTitle: "Wrong format", andMessage: "Please enter your name")
-            return
-        }
-        
-        guard userNameField.text == "1", passwordField.text == "1" else {
-            showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
             return
         }
     }
