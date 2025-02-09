@@ -11,11 +11,18 @@ final class WelcomeViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet private weak var greetingsLabel: UILabel!
+    
+    // MARK: - Public Properties
+    var userNameValue: String! = ""
+    var passwordValue: String! = ""
+    var greetingsValue: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if let greetingsValue {
+            greetingsLabel.text = "Welcome, \(greetingsValue)!"
+        }
         
         let gradientLayer = CAGradientLayer()
         

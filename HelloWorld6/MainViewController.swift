@@ -20,6 +20,14 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Overrides Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let settingsVC = segue.destination as? WelcomeViewController
+        settingsVC?.greetingsValue = userNameField.text
+        userNameField.text = settingsVC?.userNameValue
+        passwordField.text = settingsVC?.passwordValue
+    }
 
     // MARK: - IB Actions
     @IBAction private func forgotActionUN() {
@@ -61,4 +69,7 @@ extension MainViewController {
         present(alert, animated: true)
     }
 }
+
+
+//скрывать/показывать клавиатуру
 
