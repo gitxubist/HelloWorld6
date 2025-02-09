@@ -9,24 +9,34 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    private let smileyFace: String = "😄"
+    private let smileyFaceEmoji: String = "😊"
+    
     // MARK: - IB Outlets
+    @IBOutlet private weak var userNameField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     // MARK: - IB Actions
-
+    @IBAction private func forgotActionUN() {
+        showAlert(withTitle: "Oops", andMessage: "Your name is 1 \(smileyFace)")
+    }
+    @IBAction private func forgotActionP() {
+        showAlert(withTitle: "Oops", andMessage: "Your password is 1 \(smileyFaceEmoji)")
+    }
 }
 
 // MARK: - Alert Controller
-//extension ViewController {
-//    func showAlert(withTitle title: String, andMessage message: String) {
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-//            self.textField.text = ""
-//        }
-//        alert.addAction(okAction)
-//        present(alert, animated: true)
-//    }
-//}
+extension MainViewController {
+    func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+

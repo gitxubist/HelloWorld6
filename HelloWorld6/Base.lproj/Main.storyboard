@@ -41,11 +41,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="28"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?" buttonSize="small"/>
+                                        <connections>
+                                            <action selector="forgotActionUN" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8i-rZ-BEO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j11-Yp-1bj">
                                         <rect key="frame" x="184" y="0.0" width="159" height="28"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?" buttonSize="small"/>
+                                        <connections>
+                                            <action selector="forgotActionP" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfo-d3-hoi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -67,6 +73,10 @@
                             <constraint firstItem="dqi-IX-kgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sgi-iM-sns"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="Thi-Re-2wj" id="ggp-cP-xKy"/>
+                        <outlet property="userNameField" destination="dqi-IX-kgj" id="qMK-xF-otF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
