@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class MainViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IB Outlets
     @IBOutlet private weak var userNameField: UITextField!
@@ -19,6 +19,9 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameField.delegate = self
+        passwordField.delegate = self
     }
     
     // MARK: - Overrides Methods
@@ -33,9 +36,11 @@ final class MainViewController: UIViewController {
     @IBAction private func forgotActionUN() {
         showAlert(withTitle: "Oops", andMessage: "Your name is 1 \(smileyFace)")
     }
+    
     @IBAction private func forgotActionP() {
         showAlert(withTitle: "Oops", andMessage: "Your password is 1 \(smileyFaceEmoji)")
     }
+    
     @IBAction func loginAction() {
         guard let inputText = userNameField.text, !inputText.isEmpty else {
             showAlert(withTitle: "Login field is empty", andMessage: "Please enter your User name")
@@ -56,6 +61,20 @@ final class MainViewController: UIViewController {
             return
         }
     }
+    
+    // MARK: - Public Methods
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        // Проверяем, какое именно текстовое поле редактируется
+        if textField == userNameField {
+            print("Редактируем первое текстовое поле 1")
+        } else if textField == passwordField {
+            print("Редактируем второе текстовое поле 2")
+        }
+        
+        // Показать клавиатуру автоматически
+        textField.becomeFirstResponder()
+        return true
+    }
 }
 
 // MARK: - Alert Controller
@@ -70,6 +89,4 @@ extension MainViewController {
     }
 }
 
-
-//скрывать/показывать клавиатуру
 
