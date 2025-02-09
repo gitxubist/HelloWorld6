@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UIViewController, UITextFieldDelegate {
+final class MainViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet private weak var userNameField: UITextField!
@@ -19,9 +19,6 @@ final class MainViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userNameField.delegate = self
-        passwordField.delegate = self
     }
     
     // MARK: - Overrides Methods
@@ -30,6 +27,13 @@ final class MainViewController: UIViewController, UITextFieldDelegate {
         settingsVC?.greetingsValue = userNameField.text
         userNameField.text = settingsVC?.userNameValue
         passwordField.text = settingsVC?.passwordValue
+    }
+
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
     }
 
     // MARK: - IB Actions
@@ -60,20 +64,6 @@ final class MainViewController: UIViewController, UITextFieldDelegate {
             showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
             return
         }
-    }
-    
-    // MARK: - Public Methods
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        // Проверяем, какое именно текстовое поле редактируется
-        if textField == userNameField {
-            print("Редактируем первое текстовое поле 1")
-        } else if textField == passwordField {
-            print("Редактируем второе текстовое поле 2")
-        }
-        
-        // Показать клавиатуру автоматически
-        textField.becomeFirstResponder()
-        return true
     }
 }
 
