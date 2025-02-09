@@ -13,8 +13,8 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet private weak var greetingsLabel: UILabel!
     
     // MARK: - Public Properties
-    var userNameValue: String! = ""
-    var passwordValue: String! = ""
+    var userNameValue: String!
+    var passwordValue: String!
     var greetingsValue: String!
 
     override func viewDidLoad() {
@@ -43,4 +43,9 @@ final class WelcomeViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    // MARK: - Private Methods
+    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {
+        userNameValue = ""
+        passwordValue = ""
+    }
 }
