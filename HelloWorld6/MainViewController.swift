@@ -28,6 +28,29 @@ final class MainViewController: UIViewController {
     @IBAction private func forgotActionP() {
         showAlert(withTitle: "Oops", andMessage: "Your password is 1 \(smileyFaceEmoji)")
     }
+    @IBAction func loginAction() {
+        guard let inputText = userNameField.text, !inputText.isEmpty else {
+            showAlert(withTitle: "Login field is empty", andMessage: "Please enter your User name")
+            return
+        }
+        
+        let usernamePattern = "^[a-zA-Z0-9_]{1,20}$"
+        let isUsernameValid = NSPredicate(format: "SELF MATCHES %@", usernamePattern)
+            .evaluate(with: inputText)
+        
+        if !isUsernameValid {
+            showAlert(withTitle: "Wrong format", andMessage: "Please enter your name")
+            return
+        }
+        
+        guard userNameField.text == "1", passwordField.text == "1" else {
+            showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
+            return
+        }
+//        passwordField.text = ""
+//        mainLabel.text = textField.text
+//        textField.text = ""
+    }
 }
 
 // MARK: - Alert Controller
