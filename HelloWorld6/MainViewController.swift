@@ -47,9 +47,6 @@ final class MainViewController: UIViewController {
             showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
             return
         }
-//        passwordField.text = ""
-//        mainLabel.text = textField.text
-//        textField.text = ""
     }
 }
 
@@ -57,7 +54,9 @@ final class MainViewController: UIViewController {
 extension MainViewController {
     func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordField.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
