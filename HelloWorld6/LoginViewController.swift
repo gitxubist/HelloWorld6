@@ -37,11 +37,13 @@ final class LoginViewController: UIViewController {
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         guard userNameField.text == login, passwordField.text == password else {
-            showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
+            showAlert(
+                withTitle: "Invalid login or password",
+                andMessage: "Please, enter correct login and password") {
+                    self.passwordField.text = ""
+            }
             return false
         }
-        
-        // Введенное имя валидно, разрешаем переход
         return true
     }
 
@@ -67,11 +69,12 @@ final class LoginViewController: UIViewController {
 
 // MARK: - Alert Controller
 extension LoginViewController {
-    func showAlert(withTitle title: String, andMessage message: String) {
+    func showAlert(withTitle title: String, andMessage message: String, handler: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordField.text = ""
+            handler?()
         }
+        
         alert.addAction(okAction)
         present(alert, animated: true)
     }
