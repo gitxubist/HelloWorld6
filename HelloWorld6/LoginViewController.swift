@@ -7,26 +7,25 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet private weak var userNameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     
     // MARK: - Private Properties
-    private let smileyFace: String = "😄"
-    private let smileyFaceEmoji: String = "😊"
+    private let login = "1"
+    private let password = "1"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
     
     // MARK: - Overrides Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let settingsVC = segue.destination as? WelcomeViewController
         settingsVC?.greetingsValue = userNameField.text
-        userNameField.text = settingsVC?.userNameValue
-        passwordField.text = settingsVC?.passwordValue
+        unwind()
     }
 
     // Метод для скрытия клавиатуры тапом по экрану
@@ -37,21 +36,7 @@ final class MainViewController: UIViewController {
     }
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard let inputText = userNameField.text, !inputText.isEmpty else {
-            showAlert(withTitle: "Login field is empty", andMessage: "Please enter your User name")
-            return false
-        }
-        
-        let usernamePattern = "^[a-zA-Z0-9_]{1,20}$"
-        let isUsernameValid = NSPredicate(format: "SELF MATCHES %@", usernamePattern)
-            .evaluate(with: inputText)
-        
-        if !isUsernameValid {
-            showAlert(withTitle: "Wrong format", andMessage: "Please enter your name")
-            return false
-        }
-        
-        guard userNameField.text == "1", passwordField.text == "1" else {
+        guard userNameField.text == login, passwordField.text == password else {
             showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
             return false
         }
@@ -61,17 +46,27 @@ final class MainViewController: UIViewController {
     }
 
     // MARK: - IB Actions
-    @IBAction private func forgotActionUN() {
-        showAlert(withTitle: "Oops", andMessage: "Your name is 1 \(smileyFace)")
+    @IBAction func forgotAction(_ sender: UIButton) {
+        if sender.tag == 0 {
+            showAlert(withTitle: "Oops",
+                      andMessage: "Your name is \(login) 😄")
+        }
+            
+        if sender.tag == 1 {
+            showAlert(withTitle: "Oops",
+                      andMessage: "Your password is \(password) 😊")
+        }
     }
     
-    @IBAction private func forgotActionP() {
-        showAlert(withTitle: "Oops", andMessage: "Your password is 1 \(smileyFaceEmoji)")
+    // MARK: - Private Methods
+    private func unwind() {
+        userNameField.text = ""
+        passwordField.text = ""
     }
 }
 
 // MARK: - Alert Controller
-extension MainViewController {
+extension LoginViewController {
     func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -81,5 +76,3 @@ extension MainViewController {
         present(alert, animated: true)
     }
 }
-
-
