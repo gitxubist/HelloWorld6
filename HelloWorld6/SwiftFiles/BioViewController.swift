@@ -42,6 +42,9 @@ final class BioViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        userTextView.borderStyle = .none
+        userTextView.backgroundColor = .clear
     }
     
     private func setAboutOfUser() {

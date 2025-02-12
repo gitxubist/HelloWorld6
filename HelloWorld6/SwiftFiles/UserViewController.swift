@@ -48,6 +48,13 @@ final class UserViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        configureTextField(nameTestField)
+        configureTextField(familyNameTextField)
+        configureTextField(companyTextField)
+        configureTextField(departmentTextField)
+        configureTextField(jobTitleTextField)
+
     }
     
     private func setUserInfo() {
@@ -63,5 +70,11 @@ final class UserViewController: UIViewController {
             userImageView.image = UIImage(named: imageName)
         }
     }
+    
+    private func configureTextField(_ textField: UITextField) {
+        textField.borderStyle = .none
+        textField.backgroundColor = .clear
+    }
+
     
 }
