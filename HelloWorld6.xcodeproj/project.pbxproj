@@ -16,6 +16,7 @@
 		484E15B62D5D120600B53A97 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15B52D5D120600B53A97 /* UserViewController.swift */; };
 		484E15B82D5D14F300B53A97 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15B72D5D14F300B53A97 /* TabBarController.swift */; };
 		484E15BA2D5D1FB500B53A97 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15B92D5D1FB500B53A97 /* BioViewController.swift */; };
+		484E15C02D5D24D500B53A97 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15BF2D5D24D500B53A97 /* User.swift */; };
 		48A2620A2D57EF590035D410 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A262092D57EF590035D410 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		484E15B52D5D120600B53A97 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		484E15B72D5D14F300B53A97 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		484E15B92D5D1FB500B53A97 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		484E15BF2D5D24D500B53A97 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		48A262092D57EF590035D410 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 		484E15BE2D5D23B500B53A97 /* SwiftFiles */ = {
 			isa = PBXGroup;
 			children = (
+				484E15BF2D5D24D500B53A97 /* User.swift */,
 				4831CAE82D569FDD00EF2559 /* AppDelegate.swift */,
 				484E15B52D5D120600B53A97 /* UserViewController.swift */,
 				4831CAEF2D569FDD00EF2559 /* SceneDelegate.swift */,
@@ -171,6 +174,7 @@
 			files = (
 				484E15BA2D5D1FB500B53A97 /* BioViewController.swift in Sources */,
 				4831CAF22D569FDD00EF2559 /* AppDelegate.swift in Sources */,
+				484E15C02D5D24D500B53A97 /* User.swift in Sources */,
 				484E15B62D5D120600B53A97 /* UserViewController.swift in Sources */,
 				48A2620A2D57EF590035D410 /* WelcomeViewController.swift in Sources */,
 				484E15B82D5D14F300B53A97 /* TabBarController.swift in Sources */,
