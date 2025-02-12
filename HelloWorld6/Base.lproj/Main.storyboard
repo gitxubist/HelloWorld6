@@ -141,7 +141,6 @@
         <!--User Info-->
         <scene sceneID="h7Q-8s-Dkf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yYh-Yd-zNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="OhM-tJ-Oxj" customClass="UserViewController" customModule="HelloWorld6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pn5-Br-WXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
@@ -160,13 +159,14 @@
                         <segue destination="gTJ-nk-6I2" kind="show" id="ofr-An-DuC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYh-Yd-zNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="743"/>
         </scene>
         <!--Bio-->
         <scene sceneID="z32-Qw-eQx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gTJ-nk-6I2" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gTJ-nk-6I2" customClass="BioViewController" customModule="HelloWorld6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAO-mw-KOs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +221,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ofr-An-DuC"/>
+        <segue reference="jSL-tf-DAm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="hands.and.sparkles.fill" catalog="system" width="119" height="128"/>
