@@ -14,6 +14,7 @@
 		4831CAF72D569FDD00EF2559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4831CAEC2D569FDD00EF2559 /* LaunchScreen.storyboard */; };
 		4831CAF82D569FDD00EF2559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4831CAEE2D569FDD00EF2559 /* Main.storyboard */; };
 		484E15B62D5D120600B53A97 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15B52D5D120600B53A97 /* UserViewController.swift */; };
+		484E15B82D5D14F300B53A97 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E15B72D5D14F300B53A97 /* TabBarController.swift */; };
 		48A2620A2D57EF590035D410 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A262092D57EF590035D410 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4831CAEF2D569FDD00EF2559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4831CAF02D569FDD00EF2559 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		484E15B52D5D120600B53A97 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		484E15B72D5D14F300B53A97 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		48A262092D57EF590035D410 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				4831CAEA2D569FDD00EF2559 /* Info.plist */,
 				4831CAEC2D569FDD00EF2559 /* LaunchScreen.storyboard */,
 				4831CAEE2D569FDD00EF2559 /* Main.storyboard */,
+				484E15B72D5D14F300B53A97 /* TabBarController.swift */,
 				48A262092D57EF590035D410 /* WelcomeViewController.swift */,
 			);
 			path = HelloWorld6;
@@ -150,6 +153,7 @@
 				4831CAF22D569FDD00EF2559 /* AppDelegate.swift in Sources */,
 				484E15B62D5D120600B53A97 /* UserViewController.swift in Sources */,
 				48A2620A2D57EF590035D410 /* WelcomeViewController.swift in Sources */,
+				484E15B82D5D14F300B53A97 /* TabBarController.swift in Sources */,
 				4831CAF32D569FDD00EF2559 /* SceneDelegate.swift in Sources */,
 				4831CAF42D569FDD00EF2559 /* LoginViewController.swift in Sources */,
 			);
