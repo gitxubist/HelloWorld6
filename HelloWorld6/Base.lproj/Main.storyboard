@@ -138,36 +138,42 @@
             </objects>
             <point key="canvasLocation" x="100" y="743"/>
         </scene>
-        <!--User View Controller-->
+        <!--User Info-->
         <scene sceneID="h7Q-8s-Dkf">
             <objects>
-                <viewController id="OhM-tJ-Oxj" customClass="UserViewController" customModule="HelloWorld6" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYh-Yd-zNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalPresentationStyle="fullScreen" id="OhM-tJ-Oxj" customClass="UserViewController" customModule="HelloWorld6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pn5-Br-WXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ZBh-YU-6k0"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a3R-va-8ua"/>
+                    <navigationItem key="navigationItem" title="User Info" id="a3R-va-8ua">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="SIa-0F-dYe">
+                            <connections>
+                                <segue destination="gTJ-nk-6I2" kind="show" id="jSL-tf-DAm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="gTJ-nk-6I2" kind="show" id="ofr-An-DuC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yYh-Yd-zNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="743"/>
         </scene>
-        <!--View Controller-->
+        <!--Bio-->
         <scene sceneID="z32-Qw-eQx">
             <objects>
-                <viewController id="gTJ-nk-6I2" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gTJ-nk-6I2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAO-mw-KOs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XKL-KB-spT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aAj-Zl-WpD"/>
+                    <navigationItem key="navigationItem" title="Bio" id="aAj-Zl-WpD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DM-9S-60S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,11 +203,11 @@
         <!--User-->
         <scene sceneID="byH-xB-Hi3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="040-G8-478" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="040-G8-478" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="klA-4j-WR9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Elj-pa-G26">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Elj-pa-G26">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -214,6 +220,9 @@
             <point key="canvasLocation" x="808.79999999999995" y="742.5787106446777"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ofr-An-DuC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="hands.and.sparkles.fill" catalog="system" width="119" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
