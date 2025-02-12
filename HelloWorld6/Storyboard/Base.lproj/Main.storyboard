@@ -152,12 +152,46 @@
                                     <constraint firstAttribute="height" constant="150" id="9Tk-69-vvc"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="90o-UH-eyx">
+                                <rect key="frame" x="16" y="298" width="343" height="210"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tuA-NA-FUU">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BVO-yF-ucW">
+                                        <rect key="frame" x="0.0" y="44" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-zC-usj">
+                                        <rect key="frame" x="0.0" y="88" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-dv-g1G">
+                                        <rect key="frame" x="0.0" y="132" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y21-Tp-PM5">
+                                        <rect key="frame" x="0.0" y="176" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZBh-YU-6k0"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="90o-UH-eyx" firstAttribute="top" secondItem="mYj-KP-aFf" secondAttribute="bottom" constant="20" id="737-gh-KO8"/>
                             <constraint firstItem="mYj-KP-aFf" firstAttribute="leading" secondItem="ZBh-YU-6k0" secondAttribute="leading" constant="16" id="ECi-Zt-f38"/>
                             <constraint firstItem="ZBh-YU-6k0" firstAttribute="trailing" secondItem="mYj-KP-aFf" secondAttribute="trailing" constant="16" id="PYU-Av-Pt6"/>
+                            <constraint firstItem="90o-UH-eyx" firstAttribute="leading" secondItem="ZBh-YU-6k0" secondAttribute="leading" constant="16" id="WGo-RO-G9z"/>
+                            <constraint firstItem="ZBh-YU-6k0" firstAttribute="trailing" secondItem="90o-UH-eyx" secondAttribute="trailing" constant="16" id="e7U-Ok-5Le"/>
                             <constraint firstItem="mYj-KP-aFf" firstAttribute="top" secondItem="ZBh-YU-6k0" secondAttribute="top" constant="20" id="y1Q-eA-H6f"/>
                         </constraints>
                     </view>
@@ -169,6 +203,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="companyTextField" destination="wJw-zC-usj" id="KhG-fd-apX"/>
+                        <outlet property="departmentTextField" destination="5Zh-dv-g1G" id="jwU-DL-gMD"/>
+                        <outlet property="familyNameTextField" destination="BVO-yF-ucW" id="Law-RP-CBc"/>
+                        <outlet property="jobTitleTextField" destination="Y21-Tp-PM5" id="oic-nl-um0"/>
+                        <outlet property="nameTestField" destination="tuA-NA-FUU" id="lSH-Kf-CGx"/>
                         <outlet property="userImageView" destination="mYj-KP-aFf" id="aIF-S3-OIY"/>
                     </connections>
                 </viewController>
@@ -183,10 +222,28 @@
                     <view key="view" contentMode="scaleToFill" id="RAO-mw-KOs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="test" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KnI-Em-Hlj">
+                                <rect key="frame" x="16" y="128" width="343" height="470"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XKL-KB-spT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KnI-Em-Hlj" firstAttribute="top" secondItem="XKL-KB-spT" secondAttribute="top" constant="20" id="4wd-nZ-NcM"/>
+                            <constraint firstItem="XKL-KB-spT" firstAttribute="trailing" secondItem="KnI-Em-Hlj" secondAttribute="trailing" constant="16" id="Ekc-2B-jdh"/>
+                            <constraint firstItem="XKL-KB-spT" firstAttribute="bottom" secondItem="KnI-Em-Hlj" secondAttribute="bottom" constant="20" id="TSF-QA-B4z"/>
+                            <constraint firstItem="KnI-Em-Hlj" firstAttribute="leading" secondItem="XKL-KB-spT" secondAttribute="leading" constant="16" id="xjd-zy-soE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bio" id="aAj-Zl-WpD"/>
+                    <connections>
+                        <outlet property="userTextView" destination="KnI-Em-Hlj" id="t1U-G1-cEr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DM-9S-60S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,6 +293,9 @@
     <resources>
         <image name="hands.and.sparkles.fill" catalog="system" width="119" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -247,6 +307,9 @@
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

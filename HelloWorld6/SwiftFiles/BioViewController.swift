@@ -8,10 +8,15 @@
 import UIKit
 
 final class BioViewController: UIViewController {
+    
+    
+    @IBOutlet weak var userTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setColor()
+        setAboutOfUser()
     }
     
     // MARK: - Private Methods
@@ -37,5 +42,12 @@ final class BioViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func setAboutOfUser() {
+        let person = Person.person.first!
+        
+        userTextView.text = person.lifeHistory
+    
     }
 }

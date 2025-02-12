@@ -11,10 +11,17 @@ final class UserViewController: UIViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
     
+    @IBOutlet weak var nameTestField: UITextField!
+    @IBOutlet weak var familyNameTextField: UITextField!
+    @IBOutlet weak var companyTextField: UITextField!
+    @IBOutlet weak var departmentTextField: UITextField!
+    @IBOutlet weak var jobTitleTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setImage()
+        setUserInfo()
         setColor()
     }
     
@@ -43,8 +50,14 @@ final class UserViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    private func setImage() {
+    private func setUserInfo() {
         let person = Person.person.first!
+        
+        nameTestField.text = "Имя: \(person.name)"
+        familyNameTextField.text = "Фамилия: \(person.familyName)"
+        companyTextField.text = "Компания: \(person.company)"
+        departmentTextField.text = "Отдел: \(person.department)"
+        jobTitleTextField.text = "Должность: \(person.jobTitle)"
         
         if let imageName = person.image {
             userImageView.image = UIImage(named: imageName)
