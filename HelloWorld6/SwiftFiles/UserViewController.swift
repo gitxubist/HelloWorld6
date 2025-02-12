@@ -8,9 +8,13 @@
 import UIKit
 
 final class UserViewController: UIViewController {
+    
+    @IBOutlet weak var userImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setImage()
         setColor()
     }
     
@@ -37,6 +41,14 @@ final class UserViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func setImage() {
+        let person = Person.person.first!
+        
+        if let imageName = person.image {
+            userImageView.image = UIImage(named: imageName)
+        }
     }
     
 }
