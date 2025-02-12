@@ -60,6 +60,8 @@ final class UserViewController: UIViewController {
     private func setUserInfo() {
         let person = Person.person.first!
         
+        title = "\(person.name) \(person.familyName)"
+        
         nameTestField.text = "Имя: \(person.name)"
         familyNameTextField.text = "Фамилия: \(person.familyName)"
         companyTextField.text = "Компания: \(person.company)"

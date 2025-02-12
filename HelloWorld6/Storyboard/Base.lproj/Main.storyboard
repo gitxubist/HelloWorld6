@@ -201,6 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="User Info" id="a3R-va-8ua">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="SIa-0F-dYe">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="gTJ-nk-6I2" kind="show" id="jSL-tf-DAm"/>
                             </connections>
@@ -283,6 +284,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Elj-pa-G26">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

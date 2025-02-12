@@ -50,6 +50,8 @@ final class BioViewController: UIViewController {
     private func setAboutOfUser() {
         let person = Person.person.first!
         
+        title = "\(person.name) \(person.familyName) Bio"
+        
         userTextView.text = person.lifeHistory
     
     }
