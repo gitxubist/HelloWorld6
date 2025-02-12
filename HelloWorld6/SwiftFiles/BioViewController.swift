@@ -45,6 +45,8 @@ final class BioViewController: UIViewController {
         
         userTextView.borderStyle = .none
         userTextView.backgroundColor = .clear
+        
+        navigationController?.navigationBar.tintColor = .white
     }
     
     private func setAboutOfUser() {
