@@ -31,7 +31,7 @@ final class WelcomeViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    private func setColor() {
+    func setColor() {
         let gradientLayer = CAGradientLayer()
         
         let colorUP = UIColor(red: 255/255,
